@@ -46,7 +46,12 @@
               />
             </div>
             <div class="button-div">
-              <button type="submit" form="form1" value="submit">
+              <button
+                id="add-expense-btn"
+                type="button"
+                form="form1"
+                value="submit"
+              >
                 Add A New Expense
               </button>
             </div>
@@ -58,31 +63,24 @@
           <thead>
             <tr>
               <th>Type</th>
-              <th>Name</th>
+              <th colspan="">Name</th>
               <th>Date</th>
               <th>Amount</th>
             </tr>
           </thead>
-          <!-- <tbody>
+          <tbody id="table-body">
             <tr>
-              <td>Jim</td>
-              <td>00001</td>
-              <td>Blue</td>
-              <td>Blue</td>
+              <td id="placeholder-row" colspan="4">
+                Your Items Will Be Added Here!
+              </td>
             </tr>
-            <tr>
-              <td>Sue</td>
-              <td colspan="2">00002</td>
-              <td>Red</td>
-              <td>Red</td>
-            </tr>
-            <tr>
-              <td>Barb</td>
-              <td>00003</td>
-              <td>Green</td>
-              <td>Green</td>
-            </tr>
-          </tbody> -->
+            <!-- <tr>
+              <td</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr> -->
+          </tbody>
         </table>
       </div>
     </div>
