@@ -8,7 +8,84 @@
     <title>Expense Tracker</title>
   </head>
   <body>
-    <h1>hello, world</h1>
+    <div class="main-container">
+      <header>
+        <h1 class="main-heading">Expense Tracker</h1>
+      </header>
+      <div class="form-container">
+        <form action="" id="form1" class="form">
+          <fieldset>
+            <legend><strong> Add A New Item</strong></legend>
+            <div class="form-div-1">
+              <label for="type">Type:</label>
+              <select id="type" name="type">
+                <option value="card">Card</option>
+                <option value="cash">Cash</option>
+                <option value="crytpo">Cryptocoin</option>
+                <option value="other">Other</option>
+              </select>
+
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="What did you purchase?"
+              />
+            </div>
+            <div class="form-div-2">
+              <label for="date">Date:</label>
+              <input type="date" id="date" name="date" />
+              <label for="amount">Amount:</label>
+              <input
+                type="number"
+                id="amount"
+                name="amount"
+                min="1"
+                placeholder="How much did you spend?"
+              />
+            </div>
+            <div class="button-div">
+              <button type="submit" form="form1" value="submit">
+                Add A New Expense
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Name</th>
+              <th>Date</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <!-- <tbody>
+            <tr>
+              <td>Jim</td>
+              <td>00001</td>
+              <td>Blue</td>
+              <td>Blue</td>
+            </tr>
+            <tr>
+              <td>Sue</td>
+              <td colspan="2">00002</td>
+              <td>Red</td>
+              <td>Red</td>
+            </tr>
+            <tr>
+              <td>Barb</td>
+              <td>00003</td>
+              <td>Green</td>
+              <td>Green</td>
+            </tr>
+          </tbody> -->
+        </table>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
