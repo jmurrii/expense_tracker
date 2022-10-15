@@ -6,10 +6,6 @@ let td2;
 let td3;
 let td4;
 
-
-
-
-
 addExpenseBtn.addEventListener('click', () => {
 
     createNewTableRow();
@@ -24,8 +20,6 @@ function createNewTableRow() {
     td2 = document.createElement('td');
     td3 = document.createElement('td');
     td4 = document.createElement('td');
-
-
 
     tableBody.appendChild(newTableRow);
     newTableRow.appendChild(td1);
@@ -43,17 +37,18 @@ function createNewTableRow() {
 function populateTypeField() {
     const type = document.getElementById('type').value;
     const icon = document.createElement('i');
+
     if (type == 'card') {
         icon.setAttribute('class', 'fa-regular fa-credit-card');
+    } else if (type == 'cash') {
+        icon.setAttribute('class', 'fa-regular fa-money-bill-1');
+    } else if (type == 'cryptocoin') {
+        icon.setAttribute('class', 'fa-solid fa-bitcoin-sign');
+    } else if (type == 'other') {
+        icon.setAttribute('class', 'fa-regular fa-circle-question');
     }
 
-    // const cell1 = document.createTextNode(icon);
-
-    console.log(cell1);
-
-    // td1.appendChild(cell1);
-
-
+    td1.appendChild(icon);
 }
 
 function populateNameField() {
