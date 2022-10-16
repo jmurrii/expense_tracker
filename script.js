@@ -1,7 +1,6 @@
 const addExpenseBtn = document.querySelector('#add-expense-btn');
 const tableBody = document.getElementById('table-body');
-
-const type = document.getElementById('type');
+const typeField = document.getElementById('type');
 const nameField = document.getElementById('name');
 const dateField = document.getElementById('date');
 const amountField = document.getElementById('amount');
@@ -14,8 +13,15 @@ let td5;
 
 addExpenseBtn.addEventListener('click', () => {
 
+    if (typeField.value && nameField.value && dateField.value && amountField.value) {
+        createNewTableRow();
+        clearInputs();
+    } else {
+        alert('Please fill out all Fields.')
+    }
 
-    createNewTableRow();
+
+
 });
 
 function createNewTableRow() {
@@ -54,13 +60,13 @@ function removePlaceholder() {
 function populateTypeField() {
     const icon = document.createElement('i');
 
-    if (type.value == 'card') {
+    if (typeField.value == 'card') {
         icon.setAttribute('class', 'fa-regular fa-credit-card');
-    } else if (type.value == 'cash') {
+    } else if (typeField.value == 'cash') {
         icon.setAttribute('class', 'fa-regular fa-money-bill-1');
-    } else if (type.value == 'cryptocoin') {
+    } else if (typeField.value == 'cryptocoin') {
         icon.setAttribute('class', 'fa-solid fa-bitcoin-sign');
-    } else if (type.value == 'other') {
+    } else if (typeField.value == 'other') {
         icon.setAttribute('class', 'fa-regular fa-circle-question');
     }
     td1.appendChild(icon);
@@ -113,6 +119,9 @@ function deleteButton() {
     });
 
 }
+function clearInputs() {
+
+};
 
 
 
