@@ -1,6 +1,8 @@
 const addExpenseBtn = document.querySelector('#add-expense-btn');
 const tableBody = document.getElementById('table-body');
 
+
+
 let td1;
 let td2;
 let td3;
@@ -8,9 +10,7 @@ let td4;
 let td5;
 
 addExpenseBtn.addEventListener('click', () => {
-
     createNewTableRow();
-
 });
 
 function createNewTableRow() {
@@ -30,11 +30,20 @@ function createNewTableRow() {
     newTableRow.appendChild(td4);
     newTableRow.appendChild(td5);
 
+    removePlaceholder();
     populateTypeField();
     populateNameField();
     populateDateField();
     populateAmountField();
     deleteButton();
+}
+
+function removePlaceholder() {
+    const placeHolder = document.getElementById('placeholder-row');
+
+    if (placeHolder) {
+        placeHolder.parentElement.remove();
+    }
 }
 
 function populateTypeField() {
