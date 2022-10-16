@@ -5,6 +5,7 @@ let td1;
 let td2;
 let td3;
 let td4;
+let td5;
 
 addExpenseBtn.addEventListener('click', () => {
 
@@ -20,18 +21,20 @@ function createNewTableRow() {
     td2 = document.createElement('td');
     td3 = document.createElement('td');
     td4 = document.createElement('td');
+    td5 = document.createElement('td');
 
     tableBody.appendChild(newTableRow);
     newTableRow.appendChild(td1);
     newTableRow.appendChild(td2);
     newTableRow.appendChild(td3);
     newTableRow.appendChild(td4);
+    newTableRow.appendChild(td5);
 
     populateTypeField();
     populateNameField();
     populateDateField();
     populateAmountField();
-
+    deleteButton();
 }
 
 function populateTypeField() {
@@ -85,3 +88,21 @@ function populateAmountField() {
     const cell4 = document.createTextNode(`$${amount}`);
     td4.appendChild(cell4);
 }
+
+function deleteButton() {
+    const deleteBtn = document.createElement('i');
+    deleteBtn.setAttribute('id', 'delete-btn');
+    deleteBtn.setAttribute('class', 'fa-solid fa-trash-can');
+    td5.appendChild(deleteBtn);
+
+    deleteBtn.addEventListener('click', (e) => {
+        const deleteRow = e.target;
+        deleteRow.parentElement.parentElement.remove();
+    });
+
+}
+
+
+
+
+
