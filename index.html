@@ -36,24 +36,25 @@
                 id="name"
                 name="name"
                 placeholder="What did you purchase?"
+                required
               />
             </div>
             <div class="form-div-2">
               <label for="date">Date:</label>
-              <input type="date" id="date" name="date" />
+              <input type="date" id="date" name="date" required />
               <label for="amount">Amount:</label>
               <input
                 type="number"
                 id="amount"
                 name="amount"
-                min="1"
+                step="0.01"
                 placeholder="How much did you spend?"
               />
             </div>
             <div class="button-div">
               <button
                 id="add-expense-btn"
-                type="button"
+                type="submit"
                 form="form1"
                 value="submit"
               >

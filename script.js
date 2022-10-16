@@ -1,7 +1,10 @@
 const addExpenseBtn = document.querySelector('#add-expense-btn');
 const tableBody = document.getElementById('table-body');
 
-
+const type = document.getElementById('type');
+const nameField = document.getElementById('name');
+const dateField = document.getElementById('date');
+const amountField = document.getElementById('amount');
 
 let td1;
 let td2;
@@ -10,6 +13,8 @@ let td4;
 let td5;
 
 addExpenseBtn.addEventListener('click', () => {
+
+
     createNewTableRow();
 });
 
@@ -47,30 +52,27 @@ function removePlaceholder() {
 }
 
 function populateTypeField() {
-    const type = document.getElementById('type').value;
     const icon = document.createElement('i');
 
-    if (type == 'card') {
+    if (type.value == 'card') {
         icon.setAttribute('class', 'fa-regular fa-credit-card');
-    } else if (type == 'cash') {
+    } else if (type.value == 'cash') {
         icon.setAttribute('class', 'fa-regular fa-money-bill-1');
-    } else if (type == 'cryptocoin') {
+    } else if (type.value == 'cryptocoin') {
         icon.setAttribute('class', 'fa-solid fa-bitcoin-sign');
-    } else if (type == 'other') {
+    } else if (type.value == 'other') {
         icon.setAttribute('class', 'fa-regular fa-circle-question');
     }
-
     td1.appendChild(icon);
 }
 
 function populateNameField() {
-    const nameValue = document.getElementById('name').value;
-    const cell2 = document.createTextNode(nameValue);
+    const cell2 = document.createTextNode(nameField.value);
     td2.appendChild(cell2);
 }
 
 function populateDateField() {
-    const dateValue = document.getElementById('date').value;
+    const dateValue = dateField.value;
 
     const dateChosen = new Date(dateValue).getDate();
     const dateAppender = (dateChosen) => {
@@ -93,8 +95,9 @@ function populateDateField() {
 }
 
 function populateAmountField() {
-    const amount = document.getElementById('amount').value;
-    const cell4 = document.createTextNode(`$${amount}`);
+
+    const amountValue = Number(amountField.value).toFixed(2);
+    const cell4 = document.createTextNode(`$${amountValue}`);
     td4.appendChild(cell4);
 }
 
