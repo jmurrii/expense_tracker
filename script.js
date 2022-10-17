@@ -1,4 +1,3 @@
-const addExpenseBtn = document.querySelector('#add-expense-btn');
 const tableBody = document.getElementById('table-body');
 const typeField = document.getElementById('type');
 const nameField = document.getElementById('name');
