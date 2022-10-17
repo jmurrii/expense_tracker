@@ -8,8 +8,12 @@
 
 body {
   font-size: 1.2rem;
-  background: #8ec5fc;
-  background: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  background-image: linear-gradient(
+    to right,
+    #297fb9d8,
+    #6dd4fad6,
+    rgb(203, 224, 236)
+  );
 }
 
 .main-container {
@@ -20,12 +24,14 @@ body {
   margin: 30px auto;
 }
 
-.form-container {
+.form-container,
+.table-container {
   display: flex;
   justify-content: center;
 }
 
-.form {
+.form,
+.table {
   min-width: 50%;
 }
 
@@ -73,19 +79,32 @@ select {
 
 table {
   border-collapse: collapse;
+  min-width: 50%;
 }
 
 td,
 th {
   border: 1px solid #999;
   padding: 0.5rem;
+}
+
+th {
   text-align: left;
+}
+
+td {
+  text-align: center;
 }
 
 tr {
   height: 30px;
 }
 
-.icon-color {
-  color: red;
+#delete-btn {
+  transition: ease-in-out 0.3s;
+}
+
+#delete-btn:hover {
+  color: rgba(196, 55, 55, 0.849);
+  cursor: pointer;
 }

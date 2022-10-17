@@ -15,19 +15,15 @@ addExpenseBtn.addEventListener('click', () => {
 
     if (typeField.value && nameField.value && dateField.value && amountField.value) {
         createNewTableRow();
-        clearInputs();
+        clearForm();
     } else {
         alert('Please fill out all Fields.')
     }
-
-
-
 });
 
 function createNewTableRow() {
     const newTableRow = document.createElement('tr');
 
-    // Why can't I declare these as const at the top of the page - 
     td1 = document.createElement('td');
     td2 = document.createElement('td');
     td3 = document.createElement('td');
@@ -119,8 +115,8 @@ function deleteButton() {
     });
 
 }
-function clearInputs() {
-
+function clearForm() {
+    document.getElementById("form1").reset();
 };
 
 
