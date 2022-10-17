@@ -16,7 +16,7 @@ addExpenseBtn.addEventListener('click', () => {
         createNewTableRow();
         clearForm();
     } else {
-        alert('Please fill out all Fields.')
+        alert('Please fill out all Fields.');
     }
 });
 
@@ -114,6 +114,7 @@ function deleteButton() {
     });
 
 }
+
 function clearForm() {
     document.getElementById("form1").reset();
 };
